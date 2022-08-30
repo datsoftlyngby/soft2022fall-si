@@ -16,9 +16,9 @@ import java.util.Scanner;
 public class TCPC 
 {
     // Three I/O streams attached to the client:
-    static Scanner cin;        // incoming stream from the local console
-    static PrintWriter out;    // outcoming stream from client to server (the request)
-    static Scanner in;         // incoming stream from the server to the client(the response)
+    static Scanner cin;        // incoming stream from the local console (for the useer typing messages)
+    static PrintWriter out;    // outgoing stream from client to server (for the requests)
+    static Scanner in;         // incoming stream from the server to the client (for server  responses)
     
     public static int PORT = 6666;
     

@@ -71,7 +71,8 @@ public class UDPServer
         clientIP = requestPacket.getAddress();
         clientPort = requestPacket.getPort();
         System.out.println("Client port: " + clientPort);
-        System.out.println("Response: " + message); 
+        System.out.println("Response: " + message);
+        
         dataOut = message.getBytes();
         responsePacket = new DatagramPacket(dataOut, dataOut.length, clientIP, clientPort);
         serverSocket.send(responsePacket);
