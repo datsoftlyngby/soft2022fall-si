@@ -5,7 +5,7 @@ import java.net.*;
 
 /**
  *
- * @author Dora
+ * @author Dora Di
  */
 public class UDPServer
 {

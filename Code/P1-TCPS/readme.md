@@ -1,37 +1,17 @@
-package tcps;
+  **Transmission Control Protocol** is a connection-oriented protocol and requires handshaking to set up end-to-end communications.
+   Once a connection is set up, user data may be sent bi-directionally over the connection. (*Wikipedia*)
+  
+   This program:
+1.    Configures a Server
+2.    Configures a connection with a Client
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.InetAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.UnknownHostException;
-import java.util.Scanner;
+The configuration of the server includeds
+- identification of the IP adddress
+- choice of a port
+- creation of a server socket and binding it to a specific port number.
 
-/**
- *
- * @author Dora Di
- *
- * Transmission Control Protocol is a connection-oriented protocol and requires handshaking to set up end-to-end communications.
- * Once a connection is set up, user data may be sent bi-directionally over the connection. (Wikipedia)
- *
- * This program:
- * 1. Create a server socket and bind it to a specific port number
- * 2. Listen for a connection from the client and accept it. This results in a client socket, created on the server, for the connection.
- * 3. Read data from the client via an InputStream obtained from the client socket
- * 4. Send data to the client via the client socket’s OutputStream.
- * 5. Close the connection with the client.
- * 
- * The steps 3 and 4 can be repeated many times depending on the protocol agreed between the server and the client.
- */
-
-public class TCPS 
-{
-    public static final int PORT = 6666;
-    public static ServerSocket serverSocket = null; // Server gets found
-    public static Socket openSocket = null;            // Server communicates with the client
-    
-    public static Socket configureServer() throws UnknownHostException, IOException
+```
+public static Socket configureServer() throws UnknownHostException, IOException
     {
         // get server's own IP address
         String serverIP = InetAddress.getLocalHost().getHostAddress();
@@ -46,10 +26,20 @@ public class TCPS
         
         return openSocket;
     }
-    
-    public static void connectClient(Socket openSocket) throws IOException
+```
+
+The client connection configuration consists of
+- listening to the socket for incoming connection and creating a client socket for it
+- creating and binding two streams to the client socket: one for input and one for output of messages that arrive to and being sent from this server
+- reading incoming data from the client via an `InputStream` obtained from the client socket, and then processing it
+- sending data back to the client via the client socket’s `OutputStream`.
+- closing the connection with the client.
+   
+   The steps 3 and 4 can be repeated many times depending on the protocol agreed between the server and the client.
+   ```
+	public static void connectClient(Socket openSocket) throws IOException
     {
-        String request, response;
+        String request, response;`
         
         // two I/O streams attached to the server socket:       
         Scanner in;         // Scanner is the incoming stream (requests from a client)
@@ -80,8 +70,12 @@ public class TCPS
             }
         }
     }
-    
-    public static void main(String[] args) throws IOException 
+```
+   
+ 
+The main() method manages the overall process and exceptions.    
+    ```
+public static void main(String[] args) throws IOException 
     {       
         try
         {
@@ -101,4 +95,7 @@ public class TCPS
             System.out.println("Server port closed");
         }
     }
-}
+```
+
+
+ 
