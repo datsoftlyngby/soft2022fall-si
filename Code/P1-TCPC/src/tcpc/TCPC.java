@@ -42,8 +42,7 @@ public class TCPC
         
         try (Scanner cin = new Scanner(System.in);
             PrintWriter out = new PrintWriter(socket.getOutputStream(),true);
-            Scanner in = new Scanner(socket.getInputStream());)
-            {
+            Scanner in = new Scanner(socket.getInputStream());) {
                 System.out.println("Client up and running");
                 System.out.println("Send a message or \"stop\" to close connection");
 
