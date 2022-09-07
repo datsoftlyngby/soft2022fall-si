@@ -18,6 +18,7 @@ public class SoapClientApplication
             {
                   NumberConversionLocator locator = new NumberConversionLocator();
                   NumberConversionSoapType service = locator.getNumberConversionSoap();
+                  
                   Scanner sin = new Scanner(System.in);
                   while ((nmb = sin.nextLong()) < 100)
                   {
