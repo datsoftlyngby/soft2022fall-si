@@ -11,7 +11,7 @@ public class FileRouter extends RouteBuilder
     @Override
     public void configure() throws Exception
     {
-        from("file://" + SOURCE_FOLDER + "?delete=true")
+        from("file://" + SOURCE_FOLDER + "?delete=false")
                 .process(new FileProcessor())
                 .to("file://" + DESTINATION_FOLDER);
     }

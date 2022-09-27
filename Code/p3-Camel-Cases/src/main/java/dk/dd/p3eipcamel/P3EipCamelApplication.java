@@ -16,8 +16,8 @@ public class P3EipCamelApplication
       {
             // create camel, add routes, and start camel
             CamelContext ctx = new DefaultCamelContext();
-            RouteBuilderProcessor routeBuilder = new RouteBuilderProcessor();
-            // FileRouter routeBuilder = new FileRouter();
+            // RouteBuilderProcessor routeBuilder = new RouteBuilderProcessor();
+            FileRouter routeBuilder = new FileRouter();
              // ContentBasedFileRouter routeBuilder = new ContentBasedFileRouter();
             try
             {
