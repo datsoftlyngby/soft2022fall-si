@@ -16,6 +16,9 @@
         <entry key="JPA Inspector" value="true" />
         <entry key="JPA Palette" value="true" />
         <entry key="JPA Structure" value="true" />
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
@@ -23,6 +26,9 @@
         <entry key="JPA Inspector" value="false" />
         <entry key="JPA Palette" value="false" />
         <entry key="JPA Structure" value="false" />
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -42,7 +48,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.CarCatalogApplication">
+    <configuration name="CarCatalogApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="P9-MicroservicesCarCatalog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="dk.dd.carcatalog.CarCatalogApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CarCatalogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
       <module name="car-catalog" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="dk.dd.carcatalog.CarCatalogApplication" />
@@ -64,6 +77,8 @@
       <workItem from="1664291713008" duration="165000" />
       <workItem from="1668544500363" duration="303000" />
       <workItem from="1668563417703" duration="456000" />
+      <workItem from="1668595126069" duration="1312000" />
+      <workItem from="1669059151570" duration="12000" />
     </task>
     <servers />
   </component>
